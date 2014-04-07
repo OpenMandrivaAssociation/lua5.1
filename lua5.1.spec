@@ -95,6 +95,10 @@ install -m 644 etc/lua.pc %{buildroot}%{_libdir}/pkgconfig/
 mv %{buildroot}%{_bindir}/lua %{buildroot}%{_bindir}/lua%{major}
 mv %{buildroot}%{_bindir}/luac %{buildroot}%{_bindir}/luac%{major}
 
+# to avoid conflict with other versions
+mv %{buildroot}/%{_mandir}/man1/lua.1 %{buildroot}/%{_mandir}/man1/lua%{major}.1
+mv %{buildroot}/%{_mandir}/man1/luac.1 %{buildroot}/%{_mandir}/man1/luac%{major}.1
+
 %post
 /usr/sbin/update-alternatives --install %{_bindir}/lua lua %{_bindir}/lua%{major} %{alt_priority} --slave %{_bindir}/luac luac %{_bindir}/luac%{major}
 
