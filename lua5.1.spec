@@ -11,7 +11,7 @@ Release:	8
 License:	MIT
 Group:		Development/Other
 Url:		http://www.lua.org/
-Source0:	http://www.lua.org/ftp/%{name}-%{version}.tar.gz
+Source0:	http://www.lua.org/ftp/lua-%{version}.tar.gz
 Patch0:		lua-5.1-dynlib.patch
 Patch1:		lua-5.1-pkgconfig_libdir.patch
 Patch2:		lua-5.1-modules_path.patch
