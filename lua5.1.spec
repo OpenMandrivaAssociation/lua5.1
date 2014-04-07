@@ -1,7 +1,8 @@
 %define major 5.1
-%define libname %mklibname %{name} %{major}
-%define devname %mklibname %{name} %{major} -d
-%define staticname %mklibname %{name} -d -s
+%define oname lua
+%define libname %mklibname %{oname} %{major}
+%define devname %mklibname %{oname} %{major} -d
+%define staticname %mklibname %{oname} %{major} -d -s
 %define alt_priority %(echo %{major} | sed -e 's/[^0-9]//g')
 
 Summary:	Powerful, light-weight programming language
@@ -63,7 +64,7 @@ Requires:	%{devname} = %{version}-%{release}
 This package contains the static development files for Lua.
 
 %prep
-%setup -q
+%setup -q -n %{oname}-%{version}
 %apply_patches
 
 sed -i -e "s|/usr/local|%{_prefix}|g" Makefile
