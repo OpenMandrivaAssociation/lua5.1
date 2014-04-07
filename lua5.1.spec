@@ -50,6 +50,7 @@ Summary:	Headers and development files for Lua
 Group:		Development/Other
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{name} = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
 
 %description -n %{devname}
 This package contains the headers and development files for Lua.
@@ -57,7 +58,7 @@ This package contains the headers and development files for Lua.
 %package -n	%{staticname}
 Summary:	Static development files for Lua
 Group:		Development/Other
-Provides:	lua-static-devel = %{version}-%{release}
+Provides:	lua%{major}-static-devel = %{version}-%{release}
 Requires:	%{devname} = %{version}-%{release}
 
 %description -n	%{staticname}
