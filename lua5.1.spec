@@ -66,7 +66,7 @@ This package contains the static development files for Lua.
 
 %prep
 %setup -q -n %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 
 sed -i -e "s|/usr/local|%{_prefix}|g" Makefile
 sed -i -e "s|/lib|/%{_lib}|g" Makefile
