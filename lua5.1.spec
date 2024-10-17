@@ -11,7 +11,7 @@ Version:	5.1.5
 Release:	10
 License:	MIT
 Group:		Development/Other
-Url:		http://www.lua.org/
+Url:		https://www.lua.org/
 Source0:	http://www.lua.org/ftp/lua-%{version}.tar.gz
 Patch0:		lua-5.1-dynlib.patch
 Patch1:		lua-5.1-pkgconfig_libdir.patch
