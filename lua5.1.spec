@@ -16,6 +16,7 @@ Source0:	http://www.lua.org/ftp/lua-%{version}.tar.gz
 Patch0:		lua-5.1-dynlib.patch
 Patch1:		lua-5.1-pkgconfig_libdir.patch
 Patch2:		lua-5.1-modules_path.patch
+BuildRequires:	make
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 
